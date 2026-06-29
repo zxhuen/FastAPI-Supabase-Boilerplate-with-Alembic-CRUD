@@ -33,3 +33,15 @@ def edit_person_repo(db: Session, person_id: int, person: PersonCreate):
     db.refresh(person_from_db)
 
     return person_from_db
+
+
+def delete_person_repo(db: Session, person_id: int):
+    person = db.query(Person).filter(Person.id == person_id).first()
+
+    if person is None:
+        return None
+    
+    db.delete(person)
+    db.commit()
+
+    return person
