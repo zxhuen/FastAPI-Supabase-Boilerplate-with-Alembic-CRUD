@@ -1,5 +1,5 @@
 from .Person_Services import (
-    add_preson_services,
+    add_person_services,
     list_person_services,
     edit_person_services,
     delete_person_services,
