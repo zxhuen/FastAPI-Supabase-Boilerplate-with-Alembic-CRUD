@@ -9,7 +9,7 @@ from app.core.database import Base, get_db
 
 from app.models import Person
 
-SQLALCHEMY_DATABASE_URL = "postgresql+psycopg://postgres:postgres@localhost:5432/test_db"
+SQLALCHEMY_DATABASE_URL = ""
 
 engine = create_engine(
     SQLALCHEMY_DATABASE_URL
