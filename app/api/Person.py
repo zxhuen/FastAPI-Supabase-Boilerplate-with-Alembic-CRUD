@@ -24,11 +24,5 @@ def edit_person(person_id: int, person: PersonCreate, db: Session = Depends(get_
 @router.delete("/{person_id}", response_model=PersonResponse)
 def delete_person(person_id: int, db: Session = Depends(get_db)):
     person = delete_person_services(db, person_id)
-
-    if person is None:
-        raise HTTPException(
-            status_code=404,
-            detail="no person found"
-        )
     
     return person
