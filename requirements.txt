@@ -12,7 +12,7 @@ pydantic-settings
 supabase
 alembic
 
-pytest pytest-asyncio httpx
+pytest
 
 slowapi
 rich
